@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bootstrap text</title>
+        <meta name="description" content="Bootstrap">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style_bt.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1 class="fw-light">Hello</h1>        
+        <h2 class="my-3">
+            Hello
+            <!-- можно использовать <small> внутри заголовка
+                обязательно указать class="text-muted" -->
+            <small class="text-muted">text hint</small>
+        </h2>        
+        <!-- Отступы: mergin top - mt; mergin bottom - mb
+        mergin left - ms:mergin right - me (значения 1-5)
+        то же с padding top pt; padding bottom - pb
+        mx - по горизонтали (справа-слева)
+        my - по вертикала (сверху-снизу)
+        -----------------------------------------------------
+        padding left - ps; paddding right - pe (значения 1-5)
+        px - по горизонтали (справа-слева)
+        py - по вертикала (сверху-снизу)-->
+        <h3 class="ms-5 mt-3 text-muted">Hello</h3>        
+        <h4 class="pb-5">Hello</h4>
+        <h5 class="text-info">Hello</h5>
+        
+        <!-- display-1 (1-4) 
+            если нужно сделать заголовок еще больше-->
+        <h6 class="display-4">Hello</h6>
+            
+        <div class="block-image">
+            <!-- class="img-fluid" картинка становится адаптивной -
+            помещается в заданные границы, иначе занимает полный объем -->
+            <img src="img/front-end.svg" class="img-fluid" >
+        </div>
+
+        <!-- img-thumbnail - добавляет обводку и скругленнную рамку
+        float-start (end) обтекание -->
+        <img src="img/front-end.svg" class="img-thumbnail my-3 float-end" >
+
+        <!-- rounded - скругляет углы -->
+        <img src="https://itproger.com/img/courses/1536163148.jpg" class="rounded my-3" >
+
+        <!-- d-block (none) можно работать, как с блоком или скрывать
+        mx-auto - центрирование по-горизонтали  -->
+        <img src="https://itproger.com/img/courses/1536163148.jpg" class="rounded d-block mx-auto my-3" >
+
+        <!-- изменение цвета: text-(primary, secondary...
+        выравнивание text-center (start end)----------------->
+        <p class="text-primary text-center text-lg-end">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, 
+            commodi voluptates <mark> quo adipisci voluptate iusto velit</mark>
+             eos eveniet est fugit laborum, odio nobis reiciendis aut vero iure?
+              Laborum, animi!</p>        
+
+        <!-- text-nowrap - отменяет перенос текста
+        text-wrap - принудительый перенос
+        text-lowercase (uppercase capitalize) нижний/вехний/заглавная  -->
+        <p class="txt text-nowrap text-capitalize">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, 
+            commodi voluptates <mark> quo adipisci voluptate iusto velit</mark>
+             eos eveniet est fugit laborum, odio nobis reiciendis aut vero iure?
+              Laborum, animi!</p>
+
+        <!-- Жирность: fw-normal (light lighter bold bolder), 
+            стиль: fst-italic (normal), если поддерживает шрифт -->
+        <p class="fw-bolder fst-italic">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, 
+            commodi voluptates <mark> quo adipisci voluptate iusto velit</mark>
+        </p>  
+
+        <!-- Можно использовать формат заголовка к параграфу -->
+        <p class="h2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, 
+            commodi voluptates <mark> quo adipisci voluptate iusto velit</mark>
+        </p> 
+
+        <!-- lead - Делает текст немного больше (заметнее)-->
+        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, 
+            commodi voluptates <mark> quo adipisci voluptate iusto velit</mark>
+        </p>
+
+        <pre class="block">function some() {
+            var x = 0;
+            return x;}
+        </pre>
+
+        <code>var x = 0;</code>
+
+        <!-- Keybord (KBD) определение клавиш-->
+        <kbd>Ctrl + S</kbd>
+    </body>
+</html>

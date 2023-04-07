@@ -1,0 +1,47 @@
+body {
+    height: 2500px;
+}
+.bg {
+    background-color:cyan;
+}
+
+.bg1 {
+    background-color:cadetblue;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: aquamarine;
+    margin: 20px;
+    border: 2px solid gray;
+}
+
+.height-max {height: 150px;}
+
+.box {
+    width: 500px;
+    margin: 20px;
+}
+
+.txt {
+    width: 50px;
+    background: aquamarine;
+}
+
+.block-image {width: 200px;}
+
+.main-form {
+    margin: 20px;
+    width: 500px;
+}
+
+.jumbotron {
+    background:blanchedalmond;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+
+.d-flex div {
+    width: 200px;
+}

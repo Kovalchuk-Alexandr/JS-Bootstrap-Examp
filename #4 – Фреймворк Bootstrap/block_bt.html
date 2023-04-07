@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap block</title>
+        <meta name="description" content="Bootstrap block">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style_bt.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- class="border-top" (bottom start end 0) - есть обводка 
+        0 - нет обводки везде, border-end-0 только справа
+        border-success - цвета обводки
+        rounded -  скругление ~ 5px, 
+        rounded-top (bottom start end 0) - только сверху (снизу слева справа)
+        rounded-pill - элипс (радиус скругления = высоте)
+        rounded-circl - круг/овал
+        d-block (none inline inline-block table table-cell table-row flex inline-flex)
+        - display: объект получает свойство блока
+        bg-primary - background 
+        float-start (end none) обтекание
+        position-static (absolute reletive fixed sticky)
+        fixed-top (bottom)
+        w-25 (width 50 100 auto) - ширина объекта % от родительского
+        h-25 (height 50 100 auto) - высота объекта % от родительского-->
+
+        <div class="block border-end-0 border border-success rounded-1 float-end"></div>
+        <div class="d-inline">Hello</div>
+        <div class="d-inline">Hello</div>
+
+        <!-- Скрывается при 576px (sm) -->
+        <div class="block bg-primary rounded-1 d-none d-sm-block fixed-end"></div>
+
+        <div class="block bg-secondary w-25 border height-max">
+            <div class="block h-25"></div>
+        </div>
+
+        <!-- ------------  Интересные блоки  --------------- -->
+
+        <!-- class="alert-link" - внутри блока, цвет подстраивается контрастным по отношению
+        к окружению-->
+        <div class="box">
+            <div class="alert alert-info">
+                <h4 class="alert-heading">Hello</h4>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Tempora laboriosam quaerat <a href="#" class="alert-link">Some</a> accusamus, eveniet quidem neque 
+                quam delectus. Fugit officia provident ut sed. Consectetur 
+                minima fugit iusto culpa tempora, voluptatum alias!
+                <hr>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Tempora laboriosam quaerat <a href="#" class="alert-link">Some</a> accusamus, eveniet quidem neque 
+                quam delectus. Fugit officia provident ut sed. Consectetur 
+                minima fugit iusto culpa tempora, voluptatum alias!  
+                </p>
+            </div>
+        </div>
+
+        <!-- Badge - выделение текста -->
+        <div class="box">
+            <h1>Hello <span class="badge bg-secondary">Test text 10</span></h1>
+        </div>
+
+        <!-- Навигация -->
+        <div class="container mt-5">
+            <nav class="bg p-3 mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Main</a></li>
+                    <li class="breadcrumb-item"><a href="#">Cabinet</a></li>
+                    <li class="breadcrumb-item active">About</li>
+                </ol>
+            </nav>
+        
+            <div class="jumbotron"> <!-- bg-primary p-5 -->
+                <h4 class="display-2">Hello</h4>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Dignissimos nam et quo ad. Eligendi, cumque!</p>
+            </div>
+
+            <!-- ------ Красивый список ------ -->
+            <!-- list-group - обводка, скругления, подчеркивания 
+            list-group-flush - убирает обводку и скругления 
+            list-group-horizontal - горизонтально -->
+            <ul class="list-group  list-group-horizontal ">
+                <li class="list-group-item active">Element № 1</li>
+                <li class="list-group-item list-group-item-success">Element № 2</li>
+                <li class="list-group-item">Element № 3</li>
+                <li class="list-group-item disabled">Element № 4</li>
+                <li class="list-group-item list-group-item-danger">Element № 5</li>
+                <li class="list-group-item list-group-item-warning">Element № 6</li>
+            </ul>
+
+            <!-- Flex-Box: flex-row - вряд flex-row-reverse - в обратном порядке
+            flex-column -в столбик; flex-column-reverse - в обратном порядке
+            justify-content-start (end between around center) - выравнивание по ширине
+            align-items-center (stratch start end baseline)
+            align-self-start (stratch center end baseline) - индивидуально для элемента
+            flex-wrap (nowrap) - перенос на новый ряд, если не помещается 
+            order (1 - 12) сортировка -->
+            <div class="d-flex flex-row justify-content-around align-items-center flex-wrap mt-3">
+                <div class="border px-2 align-self-start order-3">
+                    1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?
+                </div>
+                <div class="border px-2 order-1">
+                    2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam eius 
+                    sequi laborum ut esse aliquid reprehenderit, voluptates alias sapiente distinctio!
+                </div>
+                <div class="border px-2 order-2">
+                    3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, rerum?
+
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around">
+                <!-- Карточки - презентационные блоки -->
+                <div class="card my-5 w-25 ">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" class="card-img-top">
+                
+                    <div class="card-body">
+                        <h5 class="card-title">Some Title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Vero, praesentium earum. Voluptas dolor dolore assumenda atque! Quaerat
+                            fugiat necessitatibus adipisci!</p>
+                    </div>
+
+                    <ul class="list-group list-group">
+                        <li class="list-group-item active">Element № 1</li>
+                        <li class="list-group-item list-group-item-success">Element № 2</li>
+                        <li class="list-group-item list-group-item-danger">Element № 3</li>
+                        <li class="list-group-item list-group-item-warning disabled">Element № 4</li>
+                    </ul>
+
+                    <div class="card-body">
+                        <a href="#" class="card-link">Fallow this link</a>
+                    </div>
+
+                    <img src="https://itproger.com/img/courses/1536163148.jpg" class="card-img-bottom">
+                </div>
+                <div class="card my-5 w-25 ">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" class="card-img-top">
+                
+                    <div class="card-body">
+                        <h5 class="card-title">Some Title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Vero, praesentium earum. Voluptas dolor dolore assumenda atque! Quaerat
+                            fugiat necessitatibus adipisci!</p>
+                    </div>
+
+                    <ul class="list-group list-group">
+                        <li class="list-group-item active">Element № 1</li>
+                        <li class="list-group-item list-group-item-success">Element № 2</li>
+                        <li class="list-group-item list-group-item-danger">Element № 3</li>
+                        <li class="list-group-item list-group-item-warning disabled">Element № 4</li>
+                    </ul>
+
+                    <div class="card-body">
+                        <a href="#" class="card-link">Fallow this link</a>
+                    </div>
+
+                    <img src="https://itproger.com/img/courses/1536163148.jpg" class="card-img-bottom">
+                </div>
+
+                <div class="card my-5 w-25 ">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" class="card-img-top">
+                
+                    <div class="card-body">
+                        <h5 class="card-title">Some Title</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Vero, praesentium earum. Voluptas dolor dolore assumenda atque! Quaerat
+                            fugiat necessitatibus adipisci!</p>
+                    </div>
+
+                    <ul class="list-group list-group">
+                        <li class="list-group-item active">Element № 1</li>
+                        <li class="list-group-item list-group-item-success">Element № 2</li>
+                        <li class="list-group-item list-group-item-danger">Element № 3</li>
+                        <li class="list-group-item list-group-item-warning disabled">Element № 4</li>
+                    </ul>
+
+                    <div class="card-body">
+                        <a href="#" class="card-link">Fallow this link</a>
+                    </div>
+
+                    <img src="https://itproger.com/img/courses/1536163148.jpg" class="card-img-bottom">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

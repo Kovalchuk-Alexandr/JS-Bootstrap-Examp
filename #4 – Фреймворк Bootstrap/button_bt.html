@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap button</title>
+        <meta name="description" content="Bootstrap">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style_bt.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- btn-link делает кнопку ссылкой 
+        btn-lg (sm) размер кнопки: большая, маленькая (средняя по-умолчанию)
+        btn-block d-block w-75(100% на всю ширину, ширина кнопки)
+        active - сразу активна 
+        disabled - неактивна-->
+        <button class="btn btn-warning btn-lg btn-block d-block w-50">Hello btn</button>
+
+        <a href="" class="btn btn-primary btn-sm">Hello 'a'</a>
+        
+        <!-- Чтобы сделать ссылку неактивной нужно прописать:
+        class="btn disabled" role="button" aria-disabled="true" tabindex="-1" -->
+        <a href="" class="btn btn-secondary btn-sm disabled"
+         role="button" aria-disabled="true" tabindex="-1">Hello 'a' - 2</a> 
+        
+        <!-- btn-outline- прозрачная с обводкой, заданным цветом
+        при наведении - реверс - фон цветной, текст - белый -->
+        <input type="button" value="Hello input" class="btn btn-outline-success active" disabled><br><br>
+
+        <!-- ----------Группировка кнопок ---------- -->
+        <div class="btn-group btn-group-lg">
+            <button class="btn btn-danger">Btn № 1</button>
+            <button class="btn btn-info">Btn № 2</button>
+            <button class="btn btn-warning">Btn № 3</button>
+        </div><br><br>
+        <div class="btn-group">
+            <button class="btn btn-danger">Btn № 1</button>
+            <button class="btn btn-info">Btn № 2</button>
+            <button class="btn btn-warning">Btn № 3</button>
+        </div><br><br>
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-danger">Btn № 1</button>
+            <button class="btn btn-info">Btn № 2</button>
+            <button class="btn btn-warning">Btn № 3</button>
+        </div><br><br>
+
+        <!-- ------ Вертикальное расположение ----- -->
+        <div class="btn-group btn-group-sm btn-group-vertical">
+            <button class="btn btn-danger">Btn № 1</button>
+            <button class="btn btn-info">Btn № 2</button>
+            <button class="btn btn-warning">Btn № 3</button>
+        </div><hr>
+
+        <!-- -------- Группировка кнопок ---------------- -->
+        <div class="btn-toolbar">
+            <div class="btn-group ">
+                <button class="btn btn-danger ms-2">Btn № 1</button>
+                <button class="btn btn-info">Btn № 2</button>
+                <button class="btn btn-warning">Btn № 3</button>
+            </div><br><br>
+
+            <div class="btn-group ">
+                <button class="btn btn-danger ms-4">Btn № 4</button>
+                <button class="btn btn-info">Btn № 5</button>
+            </div><br><br>
+
+            <div class="btn-group ">
+                <button class="btn btn-success ms-3">Btn № 6</button>
+            </div><br><br>
+        </div>
+    </body>
+</html>

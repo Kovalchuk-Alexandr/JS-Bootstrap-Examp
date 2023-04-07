@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap site</title>
+        <meta name="description" content="Bootstrap site">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <!-- Вначале невидимый блок -->
+            <div class="bg-lite collapse" id="header-hidden">
+                <div class="container">
+                    <div class="row">
+                        <!-- Первая колонка 8 столбцов - 7 при увеличении-->
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>About Company</h4>
+                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Similique incidunt eveniet, quae sint earum repellat aliquid enim. Nobis, 
+                                minima. Tempora esse blanditiis tenetur error neque eligendi facere 
+                                praesentium possimus mollitia.
+                            </p>
+                        </div>
+
+                        <!-- вторая колонка 4 (12-8) + 1 пустой (offset)
+                            + оставшиеся-->
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4>Contacts</h4>
+                            <ul class="list-unstyled"> <!-- список без стилей -->
+                                <li><a href="#" class="text-muted">Twitter</a></li>
+                                <li><a href="#" class="text-muted">FaceBook</a></li>
+                                <li><a href="#" class="text-muted">Telegram</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Видимая часть шапки -->
+            <div class="navbar navbar-light bg-lite shadow-sm">
+                <!-- добавляем class="container" ко всем нужным блокам,
+                чтобы были на одной линии -->
+                <div class="container d-flex justify-content-between">
+                    <!-- class="navbar-band" - для логотипа -->
+                    <a href="#" class="navbar-brand fw-bold">itProger</a>
+
+                    <!-- Кнопка для показа скрытого меню
+                    data-bs-toggle="collapse" - назначение: показать/скрыть
+                    data-target="header-hidden" - с каким объектом работаем -->
+                    <button type="button" class="navbar-toggler collapsed"
+                        data-bs-toggle="collapse" data-bs-target="#header-hidden">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Презентационный блок -->
+        <div class="jumbotron p-4 py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <!-- Когда > 768px колонка занимает 50% -->
+                    <div class="col-md-6">
+                        <h1 class="display-3">Very Big Title</h1>
+                        <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Odio mollitia quidem consequuntur assumenda hic omnis repellat repudiandae 
+                            sequi praesentium laboriosam!
+                        </p>
+                        <a href="#" class="btn btn-warning">Fallow link</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Основной блок -->
+        <div class="container my-5">
+            <h1>All Site Articles</h1>
+            
+            <!-- Хранилище блоков -->
+            <div class="d-flex flex-wrap justify-content-between">
+
+                <!-- Блок карточек -->
+                <!-- 1 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">01.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">02.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">03.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">04.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">05.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 блок карточек -->
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
+                    class="card-img-top">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
+                            saepe eveniet libero? Voluptate, repudiandae consequatur.
+                        </p>
+                        <!-- несколько кнопок -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">06.05.2050</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="border-top">
+            <p>All rights reserved &copy;</p>
+            <a href="#">Go to top  👨‍💻</a>
+            <ul class="list-unstyled">
+                <li>This is a list.</li>
+                <li>It appears completely unstyled.</li>
+                <li>Structurally, it's still a list.</li>
+                <li>However, this style only applies to immediate child elements.</li>
+                <li>Nested lists:
+                    <ul>
+                    <li>are unaffected by this style</li>
+                    <li>will still show a bullet</li>
+                    <li>and have appropriate left margin</li>
+                    </ul>
+                </li>
+                <li>This may still come in handy in some situations.</li>
+            </ul>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+        crossorigin="anonymous"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+    </body>
+</html>

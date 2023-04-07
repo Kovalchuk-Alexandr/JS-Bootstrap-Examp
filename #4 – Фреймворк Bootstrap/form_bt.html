@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap forms</title>
+        <meta name="description" content="Bootstrap">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style_bt.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <form class="form-control w-50 ms-20">
+        <!-- <form class="main-form"> -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <!-- class="form-control" - для полей формы 
+                readonly - только для чтения
+                class="form-control-plaintext" - без обводки, только текст -->
+                <input type="text" name="name" class="form-control-plaintext" value="Alex" readonly>
+                <!-- подсказка -->
+                <small class="form-text text-muted">Hint for field above</small>
+            </div>
+            <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" class="form-control">
+            </div><br>
+
+            <!-- добавление текста вначале и вконце поля -->
+            <div class="form-group">
+                    <label for="pass">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="input-group-text">.com</span>
+                                <button type="button" class="btn btn-outline-warning">Tup Me</button>
+                            </div>
+                        </div>
+                    </div>
+            </div><br>
+
+            <!-- выпадающий список 
+                form-control-lg - увеличенный размер
+                form-control-sm - уменьшеннный размер-->
+
+            <div class="form-group">
+                    <label >Drop list (small)</label>
+                    <select class="form-control form-control-sm" > <!-- multiple-->
+                        <option value="">1 - One</option>
+                        <option value="">2 - Two</option>
+                        <option value="">3 - Three</option>
+                        <option value="">4 - For</option>
+                    </select>
+            </div><br>
+
+            <!-- ----- Группа для чек-бокса ----- -->
+            <div class="form-group form-check">
+                    <input type="checkbox" name="check-box" class="form-check-input">
+                    <label for="check-box" class="form-check-label">Check Box</label>
+            </div><br>
+
+            <!-- ----- радио-кнопки -----
+            form-check-inline - обязательно для двух ч/б чтобы разместить
+            в одну линию -->
+            <div class="form-group form-check form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input">
+                    <label class="form-check-label">Mail</label>
+            </div>
+            <div class="form-group form-check form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input">
+                    <label class="form-check-label">FeMail</label>
+            </div><br><br>
+
+            <!-- Красивый переключатель; все атрибуты обязательны 
+            <input type="checkbox" name="" id="check-box1" class="form-check-input"> -->
+            <div class="form-check form-switch ">
+                <input type="checkbox" name="" id="check-box1" class="form-check-input">
+                <label for="check-box1" class="form-check-label">Nice switcher - 1</label>
+            </div><br>
+            <buttton type="button" class="btn btn-success">Button</buttton>
+        </form><br>
+
+        <!-- еще один красивый переключатель -->
+        <div class="form-check form-switch ms-20">
+            <input type="checkbox" name="" id="check-box2" class="form-check-input">
+            <label for="check-box2" class="form-check-label">Nice switcher - 2</label>
+        </div>
+
+        <!--  Пример формы на основе сетки Grid -->
+        <form class="main-form row g-3 w-75 me-20">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Check me out
+                </label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+
+    </body>
+</html>

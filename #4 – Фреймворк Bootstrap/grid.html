@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bootstrap</title>
+        <meta name="description" content="Bootstrap">
+        <meta name="keywords" content="itproger, ALex, Home">
+        <meta name="author" content="Alexander Kovalchuk">
+        <link rel="stylesheet" href="css/style_bs.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <!-- <div class="container-fluid bg">
+            растягивается на всю ширину -->
+        <!-- отступы по бокам -->
+        <div class="container bg">
+            <!-- создаем ряды, в каждом можно создать до 12 столбцов 
+            для row можно использовать атрибуты flex-box justify-contend:
+        start end center around between -------------
+        выравнивание по вертикали: 
+        align-items-center (start end center stratch baseline)-->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-6 block">
+                    Row 1 Column 1
+                    <!-- внутри столбец можем разбить еще -->
+                    <div class="container bg1">
+                        <div class="row ">
+                            <div class="col-6 block">
+                                Row inner 1 Column 1
+                            </div>
+                            <div class="col-6 block">
+                                Row inner 1 Column 2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- выравнивание отдельного элемента align-self-end
+                (start end center stratch baseline) -->
+                <div class="col-1 offset-1 col-md-2 offset-md-2 block align-self-end">
+                    Row 1 Column 2
+                </div>
+                <div class="col-2 col-md-1 block">
+                    Row 1 Column 3
+                </div>
+            </div>
+            <div class="row">
+                <!-- Если >=1200 px (-xl-) -->
+                <div class="col-xl-6 col-md-4 col-1">
+                    Row 2 Column 1
+                </div>
+                <div class="col-xl-4 col-md-5 col-7">
+                    Row 2 Column 2
+                </div>
+                <div class="col-xl-2 col-md-3 col-4">
+                    Row 2 Column 3
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-1 offset-xl-4 col-5 block">
+                    Row 3 Column 1
+                </div>
+                <div class="col block">
+                    Row 3 Column 2
+                </div>
+                <div class="col block">
+                    Row 3 Column 3
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </body>
+</html>
