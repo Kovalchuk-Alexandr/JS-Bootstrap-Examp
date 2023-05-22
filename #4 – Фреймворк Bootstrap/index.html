@@ -3,235 +3,141 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bootstrap site</title>
-        <meta name="description" content="Bootstrap site">
+        <title>Bootstrap forms</title>
+        <meta name="description" content="Bootstrap">
         <meta name="keywords" content="itproger, ALex, Home">
         <meta name="author" content="Alexander Kovalchuk">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_bt.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
-        <header>
-            <!-- Вначале невидимый блок -->
-            <div class="bg-lite collapse" id="header-hidden">
-                <div class="container">
-                    <div class="row">
-                        <!-- Первая колонка 8 столбцов - 7 при увеличении-->
-                        <div class="col-sm-8 col-md-7 py-4">
-                            <h4>About Company</h4>
-                            <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                                Similique incidunt eveniet, quae sint earum repellat aliquid enim. Nobis, 
-                                minima. Tempora esse blanditiis tenetur error neque eligendi facere 
-                                praesentium possimus mollitia.
-                            </p>
-                        </div>
+        <form class="form-control w-50 ms-20">
+        <!-- <form class="main-form"> -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <!-- class="form-control" - для полей формы 
+                readonly - только для чтения
+                class="form-control-plaintext" - без обводки, только текст -->
+                <input type="text" name="name" class="form-control-plaintext" value="Alex" readonly>
+                <!-- подсказка -->
+                <small class="form-text text-muted">Hint for field above</small>
+            </div>
+            <div class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" class="form-control">
+            </div><br>
 
-                        <!-- вторая колонка 4 (12-8) + 1 пустой (offset)
-                            + оставшиеся-->
-                        <div class="col-sm-4 offset-md-1 py-4">
-                            <h4>Contacts</h4>
-                            <ul class="list-unstyled"> <!-- список без стилей -->
-                                <li><a href="#" class="text-muted">Twitter</a></li>
-                                <li><a href="#" class="text-muted">FaceBook</a></li>
-                                <li><a href="#" class="text-muted">Telegram</a></li>
-                            </ul>
+            <!-- добавление текста вначале и вконце поля -->
+            <div class="form-group">
+                    <label for="pass">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="input-group-text">.com</span>
+                                <button type="button" class="btn btn-outline-warning">Tup Me</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> 
+            </div><br>
 
-            <!-- Видимая часть шапки -->
-            <div class="navbar navbar-light bg-lite shadow-sm">
-                <!-- добавляем class="container" ко всем нужным блокам,
-                чтобы были на одной линии -->
-                <div class="container d-flex justify-content-between">
-                    <!-- class="navbar-band" - для логотипа -->
-                    <a href="#" class="navbar-brand fw-bold">itProger</a>
+            <!-- выпадающий список 
+                form-control-lg - увеличенный размер
+                form-control-sm - уменьшеннный размер-->
 
-                    <!-- Кнопка для показа скрытого меню
-                    data-bs-toggle="collapse" - назначение: показать/скрыть
-                    data-target="header-hidden" - с каким объектом работаем -->
-                    <button type="button" class="navbar-toggler collapsed"
-                        data-bs-toggle="collapse" data-bs-target="#header-hidden">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+            <div class="form-group">
+                    <label >Drop list (small)</label>
+                    <select class="form-control form-control-sm" > <!-- multiple-->
+                        <option value="">1 - One</option>
+                        <option value="">2 - Two</option>
+                        <option value="">3 - Three</option>
+                        <option value="">4 - For</option>
+                    </select>
+            </div><br>
 
+            <!-- ----- Группа для чек-бокса ----- -->
+            <div class="form-group form-check">
+                    <input type="checkbox" name="check-box" class="form-check-input">
+                    <label for="check-box" class="form-check-label">Check Box</label>
+            </div><br>
+
+            <!-- ----- радио-кнопки -----
+            form-check-inline - обязательно для двух ч/б чтобы разместить
+            в одну линию -->
+            <div class="form-group form-check form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input">
+                    <label class="form-check-label">Mail</label>
             </div>
-        </header>
+            <div class="form-group form-check form-check-inline">
+                    <input type="radio" name="gender" class="form-check-input">
+                    <label class="form-check-label">FeMail</label>
+            </div><br><br>
 
-        <!-- Презентационный блок -->
-        <div class="jumbotron p-4 py-5 bg-dark text-white">
-            <div class="container">
-                <div class="row">
-                    <!-- Когда > 768px колонка занимает 50% -->
-                    <div class="col-md-6">
-                        <h1 class="display-3">Very Big Title</h1>
-                        <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Odio mollitia quidem consequuntur assumenda hic omnis repellat repudiandae 
-                            sequi praesentium laboriosam!
-                        </p>
-                        <a href="#" class="btn btn-warning">Fallow link</a>
+            <!-- Красивый переключатель; все атрибуты обязательны 
+            <input type="checkbox" name="" id="check-box1" class="form-check-input"> -->
+            <div class="form-check form-switch ">
+                <input type="checkbox" name="" id="check-box1" class="form-check-input">
+                <label for="check-box1" class="form-check-label">Nice switcher - 1</label>
+            </div><br>
+            <buttton type="button" class="btn btn-success">Button</buttton>
+        </form><br>
 
-                    </div>
-                </div>
-            </div>
-
+        <!-- еще один красивый переключатель -->
+        <div class="form-check form-switch ms-20">
+            <input type="checkbox" name="" id="check-box2" class="form-check-input">
+            <label for="check-box2" class="form-check-label">Nice switcher - 2</label>
         </div>
 
-        <!-- Основной блок -->
-        <div class="container my-5">
-            <h1>All Site Articles</h1>
-            
-            <!-- Хранилище блоков -->
-            <div class="d-flex flex-wrap justify-content-between">
-
-                <!-- Блок карточек -->
-                <!-- 1 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">01.05.2050</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">02.05.2050</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">03.05.2050</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">04.05.2050</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">05.05.2050</small>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6 блок карточек -->
-                <div class="card mb-4 shadow-sm">
-                    <img src="https://itproger.com/img/courses/1481188465.jpg" alt="Foto"
-                    class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis 
-                            saepe eveniet libero? Voluptate, repudiandae consequatur.
-                        </p>
-                        <!-- несколько кнопок -->
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Details</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">06.05.2050</small>
-                        </div>
-                    </div>
+        <!--  Пример формы на основе сетки Grid -->
+        <form class="main-form row g-3 w-75 me-20">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Check me out
+                </label>
                 </div>
             </div>
-        </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
 
-        <footer class="border-top">
-            <p>All rights reserved &copy;</p>
-            <a href="#">Go to top  👨‍💻</a>
-            <ul class="list-unstyled">
-                <li>This is a list.</li>
-                <li>It appears completely unstyled.</li>
-                <li>Structurally, it's still a list.</li>
-                <li>However, this style only applies to immediate child elements.</li>
-                <li>Nested lists:
-                    <ul>
-                    <li>are unaffected by this style</li>
-                    <li>will still show a bullet</li>
-                    <li>and have appropriate left margin</li>
-                    </ul>
-                </li>
-                <li>This may still come in handy in some situations.</li>
-            </ul>
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
-        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
-        crossorigin="anonymous"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <!--- <script src="js/bootstrap.min.js"></script> -->
     </body>
 </html>
